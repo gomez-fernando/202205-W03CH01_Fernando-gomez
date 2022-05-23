@@ -1,10 +1,10 @@
-// import { arrayPersonajes } from "./personajes.js";
+import { arrayPersonajes } from "../personajes.js";
 
-
-export function carrouselTemplate(name, family) {
-    return `
-    <ul class="characters-list row list-unstyled">
-    <li class="character col">
+function injectCard(arrayPersonajes){
+    let html = '';
+    arrayPersonajes.forEach(element => {
+        html += `
+        <li class="character col">
     <div class="card character__card">
       <img
         src="img/no-one.jpg"
@@ -12,7 +12,7 @@ export function carrouselTemplate(name, family) {
         class="character__picture card-img-top"
       />
       <div class="card-body">
-        <h2 class="character__name card-title h4">${name} ${family}</h2>
+        <h2 class="character__name card-title h4">${element.name} ${element.family}</h2>
         <div class="character__info">
           <ul class="list-unstyled">
             <li>Edad: X años</li>
@@ -41,9 +41,27 @@ export function carrouselTemplate(name, family) {
       <i class="emoji"></i>
     </div>
   </li>
-      </ul>
-`;
+        `
+    });
+    // console.log(html);
+    return html
 }
+// injectCard(arrayPersonajes);
+
+export function carrouselTemplate(arrayPersonajes) {
+    let cards = injectCard(arrayPersonajes);
+    // console.log(cards);
+
+    let html = '<ul class="characters-list row list-unstyled">';
+    html += cards;
+    html += '</ul>'
+
+    // console.log(html);
+
+    return html;
+}
+
+carrouselTemplate(arrayPersonajes)
 
 export function cardTemplate() {
     return `
