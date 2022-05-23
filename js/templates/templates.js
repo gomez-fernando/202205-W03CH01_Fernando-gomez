@@ -7,7 +7,7 @@ function injectCard(arrayPersonajes){
         <li class="character col">
     <div class="card character__card">
       <img
-        src="img/no-one.jpg"
+        src="./img/${element.img}"
         alt="Nombre y familia del personaje"
         class="character__picture card-img-top"
       />
@@ -38,12 +38,13 @@ function injectCard(arrayPersonajes){
           </div>
         </div>
       </div>
-      <i class="emoji"></i>
+      <i class="emoji">${element.emoji}</i>
     </div>
   </li>
-        `
+        `;
+
     });
-    // console.log(html);
+    // console.log(element);
     return html
 }
 // injectCard(arrayPersonajes);

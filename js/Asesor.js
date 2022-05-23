@@ -2,8 +2,8 @@ import { Personaje } from "./Personaje.js";
 
 export class Asesor extends Personaje {
     #advised;
-    constructor(name, age, family, advised = new Personaje()) {
-        super(name, age, family);
+    constructor(name, age, family, img, emoji, advised = new Personaje()) {
+        super(name, age, family, img, emoji);
         this.#advised = advised;
     }
     saludar() {
