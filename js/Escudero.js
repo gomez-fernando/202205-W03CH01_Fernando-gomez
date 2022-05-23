@@ -9,6 +9,12 @@ export class Escudero extends Personaje {
         this.#maitre = maitre;
         this.#pelota = pelota;
     }
+    get maitre() {
+        return this.#maitre;
+    };
+    get pelota() {
+        return this.#pelota;
+    };
     saludar() {
         return 'Soy un loser';
     }

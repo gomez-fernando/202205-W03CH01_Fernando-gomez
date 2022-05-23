@@ -8,6 +8,12 @@ export class Luchador extends Personaje {
         this.#arme = arme;
         this.#skill = skill;
     }
+    get arme() {
+        return this.#arme;
+    };
+    get skill() {
+        return this.#skill;
+    };
     saludar() {
         return 'Primero pego y luego pregunto'
     }
