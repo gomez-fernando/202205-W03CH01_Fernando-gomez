@@ -18,6 +18,7 @@ function index() {
     console.log(arrayPersonajes);
 
     const carrousel = document.querySelector('#carrousel');
-    carrousel.innerHTML = carrouselTemplate(arrayPersonajes[0].name, arrayPersonajes[0].family);
+    // carrousel.innerHTML = carrouselTemplate(arrayPersonajes[0].name, arrayPersonajes[0].family);
+    carrousel.innerHTML = carrouselTemplate(arrayPersonajes);
 
 }
