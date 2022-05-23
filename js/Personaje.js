@@ -3,10 +3,14 @@ export class Personaje {
     #family;
     #age;
     #state;
-    constructor(name, age, family) {
+    #img
+    #emoji
+    constructor(name, age, family, img, emoji) {
         this.#name = name;
-        this.#family = family;
         this.#age = age;
+        this.#family = family;
+        this.#img = img;
+        this.#emoji = emoji;
         this.#state = 'vivo';
     }
     get name() {
@@ -17,6 +21,12 @@ export class Personaje {
     };
     get age() {
         return this.#age;
+    };
+    get img() {
+        return this.#img;
+    };
+    get emoji() {
+        return this.#emoji;
     };
     get state() {
         return this.#state;
