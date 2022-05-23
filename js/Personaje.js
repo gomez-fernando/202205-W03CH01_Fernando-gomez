@@ -11,7 +11,7 @@ export class Personaje {
         this.#family = family;
         this.#img = img;
         this.#emoji = emoji;
-        this.#state = 'vivo';
+        this.#state = 'alive';
     }
     get name() {
         return this.#name;
@@ -31,6 +31,9 @@ export class Personaje {
     get state() {
         return this.#state;
     };
+    set state(state) {
+        this.#state = state;
+    }
     saludar() {};
 }
 

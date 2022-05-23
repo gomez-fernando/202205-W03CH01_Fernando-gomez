@@ -6,6 +6,9 @@ export class Rey extends Personaje {
         super(name, age, family, img, emoji);
         this.#yearsKingdom = yearsKingdom
     }
+    get yearsKingdom() {
+        return this.#yearsKingdom;
+    };
     saludar() {
         return 'Vais a morir todos!!!'
     }
