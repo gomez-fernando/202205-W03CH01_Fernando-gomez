@@ -34,8 +34,8 @@ function injectCard(arrayPersonajes){
             ${(element.maitre !== undefined) ? `<li>Sirve a: ${element.maitre.name} ${element.maitre.family}</li>` : ''}
           </ul>
           <div class="character__actions">
-            <button class="character__action btn">habla</button>
-            <button class="character__action btn">muere</button>
+            <button class="character__action btn" data-name="${element.name}-${element.family}"    data-action="habla">habla</button>
+            <button class="character__action btn" data-name="${element.name}-${element.family}"  data-action="muere">muere</button>
           </div>
         </div>
       </div>
